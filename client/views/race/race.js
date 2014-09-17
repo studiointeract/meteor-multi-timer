@@ -7,7 +7,6 @@ Template.race.events({
     var _race = Router.current().params._id;
     Participants.insert({name: name, _race: _race});
   },
-
   'click li': function() {
     if (!this.timestamp) {
       Participants.update({_id: this._id}, {$set: {timestamp: (+new Date)}});
@@ -43,7 +42,3 @@ Template.race.helpers({
     }
   }
 });
-
-Meteor.setInterval(function() {
-  Session.set('now', (+new Date));
-}, 100);
