@@ -1,0 +1,13 @@
+<template name="home">
+  <ul>
+    {{#each races}}
+    <li>
+      <a href="/race/{{_id}}">{{name}}</a>
+    </li>
+    {{/each}}
+  </ul>
+  <form>
+    <input type="text" placeholder="Add a race">
+    <button type="submit">Add</button>
+  </form>
+</template>
